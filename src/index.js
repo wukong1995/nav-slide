@@ -2,9 +2,10 @@ import $ from 'jquery';
 import scrollTo from 'jquery-scroll';
 
 const defaults = {
-  navSelector: $('#nav'),
+  navSelector: '#nav',
   navSubTagName: 'a',
   isUseAnchor: false,
+  isChangeHash: true,
   sectionSelector: $('.category'),
   delay: 500,
   offset: 0,
@@ -17,7 +18,7 @@ const navSilde = option => {
   const options = Object.assign({}, defaults, option);
 
   const $document = $(document);
-  const $nav = options.navSelector;
+  const $nav = $(options.navSelector);
   const $item = options.sectionSelector;
   const $category = $nav.find(options.navSubTagName);
 
@@ -41,6 +42,10 @@ const navSilde = option => {
       const $activeCategory = $category.eq(activeIndex);
       $category.removeClass(options.activeClass);
       $activeCategory.addClass(options.activeClass);
+
+      if(options.isUseAnchor && options.isChangeHash) {
+        location.hash = $activeCategory.attr('href');
+      }
     }
   });
 
