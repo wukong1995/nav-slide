@@ -1,0 +1,14 @@
+{
+  "name": "nav-slide",
+  "version": "1.0.0",
+  "description": "it is npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node_modules"
+  ],
+  "author": "wangpeipei",
+  "license": "ISC"
+}
