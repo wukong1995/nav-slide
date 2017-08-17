@@ -57,4 +57,5 @@ a {
 .category {
   width: 100%;
   height: calc(100vh);
+  padding-top: 70px;
 }
