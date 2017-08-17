@@ -16,7 +16,7 @@ const defaults = {
   easing: 'swing'
 }
 
-const navSilde = option => {
+const navSlide = option => {
   const options = Object.assign({}, defaults, option);
 
   const $document = $(document);
@@ -66,4 +66,4 @@ const navSilde = option => {
   }
 };
 
-export default navSilde;
+export default navSlide;
