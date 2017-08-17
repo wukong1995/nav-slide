@@ -5,10 +5,10 @@
 
 ###Usage for webpack
 ```javascript
-import navSilde from 'nav-slide';
+import navSlide from 'nav-slide';
 // 样式自己写
 
-const modal = new navSilde([options]);
+const modal = new navSlide([options]);
 ```
 
 #### *options*
