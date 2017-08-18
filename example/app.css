@@ -45,16 +45,16 @@ a {
   margin-right: 35px;
 }
 
-.nav__item.active {
+.nav__item.is-active {
   color: #e62e8b;
 }
 
-.nav__item.active::after {
+.nav__item.is-active::after {
   width: 100%;
   border-color:#e62e8b;
 }
 
-.category {
+.slide {
   width: 100%;
   height: calc(100vh);
   padding-top: 70px;

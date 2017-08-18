@@ -13,14 +13,11 @@ const modal = new navSlide([options]);
 
 #### *options*
 -----
-- navSelector           // 默认值：'#nav',
+- navSelector           // 默认值：'#js-nav-wrap',
 - navSubTagName         // 默认值：'a',
-- isUseAnchor           // 默认值：false,
-- isChangeHash          // 默认值：true,
-- sectionSelector       // 默认值：$('.category'),
+- sectionSelector       // 默认值：'.js-slide-section',
 - delay                 // 默认值：500,
 - offset                // 默认值：0,
-- activeClass           // 默认值：'active',
+- activeClass           // 默认值：'is-active',
 - duration              // 默认值：800,
 - easing                // 默认值：'swing'
-

@@ -1,69 +1,78 @@
-'use strict';
-
 import $ from 'jquery';
 import scrollTo from 'jquery-scroll';
 
 const defaults = {
-  navSelector: '#nav',
+  navSelector: '#js-nav-wrap',
   navSubTagName: 'a',
-  isUseAnchor: false,
-  isChangeHash: true,
-  sectionSelector: $('.category'),
+  sectionSelector: '.js-slide-section',
   delay: 500,
   offset: 0,
-  activeClass: 'active',
+  activeClass: 'is-active',
   duration: 800,
   easing: 'swing'
+}
+
+const $document = $(document);
+
+const isSectionScope = ($elem, offset) => {
+  const position = $document.scrollTop();
+  const min = Math.floor($elem.offset().top - offset);
+  const max = Math.floor($elem.offset().top - offset) + Math.floor($elem.innerHeight());
+
+  return position >= min && position <= max;
 }
 
 const navSlide = option => {
   const options = Object.assign({}, defaults, option);
 
-  const $document = $(document);
-  const $nav = $(options.navSelector);
-  const $item = options.sectionSelector;
-  const $category = $nav.find(options.navSubTagName);
+  const { navSelector, sectionSelector, navSubTagName, activeClass, offset, duration, easing } = options;
 
-  let activeIndex = 0;
-  $category.eq(0).addClass(options.activeClass);
+  const $nav = $(navSelector);
+  const $slide = $(sectionSelector);
+  const $category = $nav.find(navSubTagName);
 
-  $document.on('scroll', () => {
-    const position = $document.scrollTop();
+  let activeIndex = -1;
+
+
+  const scrollHandle = () => {
     const oldIndex = activeIndex;
+    let isScope = false;
 
-    $item.each((index, elem) => {
+    $slide.each((index, elem) => {
       const $elem = $(elem);
 
-      if (position >= Math.floor($elem.offset().top - options.offset)
-        && position <= Math.floor($elem.offset().top - options.offset) + Math.floor($elem.innerHeight())) {
+      if (isSectionScope($elem, offset)) {
         activeIndex = index;
+        isScope = true;
       }
     });
 
-    if (oldIndex !== activeIndex) {
-      const $activeCategory = $category.eq(activeIndex);
-      $category.removeClass(options.activeClass);
-      $activeCategory.addClass(options.activeClass);
-
-      if(options.isUseAnchor && options.isChangeHash) {
-        location.hash = $activeCategory.attr('href');
+    if (isScope) {
+      if (oldIndex !== activeIndex) {
+        const $activeCategory = $category.eq(activeIndex);
+        $category.removeClass(activeClass);
+        $activeCategory.addClass(activeClass);
       }
+    } else {
+      activeIndex = -1;
+      $category.removeClass(activeClass);
     }
-  });
-
-  // 不使用锚点，为每个tag挂在事件
-  if(!options.isUseAnchor) {
-    $category.on('click', function (e) {
-      e.preventDefault();
-      const $this = $(this);
-      scrollTo({
-        selector: $item.eq($this.data('index')),
-        offset: options.offset,
-        duration: options.duration,
-        easing: options.easing
-      });
-    });
   }
+
+  $document.on('scroll', scrollHandle);
+
+  scrollHandle();
+
+  $category.on('click', function (e) {
+    e.preventDefault();
+    const $this = $(this);
+    scrollTo({
+      selector: $slide.eq($this.data('index')),
+      offset,
+      duration,
+      easing
+    });
+  });
 };
 
 export default navSlide;
