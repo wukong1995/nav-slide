@@ -9,7 +9,7 @@ const config = {
   },
   output: {
     path: OUTPATH,
-    filename: '[name].min.js',
+    filename: '[name].js',
     publicPath: "/assets/"
   },
   module: {
