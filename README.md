@@ -1,14 +1,14 @@
 # nav-slide
 - - -
-###Install
+### Install
 `npm install nav-slide --save`
 
-###Usage for webpack
+### Usage for webpack
 ```javascript
-import navSlide from 'nav-slide';
-// 样式自己写
+import NavSlide from 'nav-slide';
 
-const modal = new navSlide([options]);
+
+const modal = new NavSlide([options]);
 ```
 
 #### *options*
