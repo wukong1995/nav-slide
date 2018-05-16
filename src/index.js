@@ -22,7 +22,7 @@ const isSectionScope = ($elem, offset) => {
   return position >= min && position <= max;
 }
 
-const navSlide = option => {
+const NavSlide = option => {
   const options = Object.assign({}, defaults, option);
 
   const { navSelector, sectionSelector, navSubTagName, activeClass, offset, duration, easing } = options;
@@ -75,4 +75,4 @@ const navSlide = option => {
   });
 };
 
-export default navSlide;
+export default NavSlide;

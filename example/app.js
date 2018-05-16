@@ -1,6 +1,6 @@
-import navSilde from '../src';
+import navSilder from '../src';
 
-new navSilde({
+new NavSilder({
   offset: 70,
   hasAnchor: false
 });
