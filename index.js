@@ -62,7 +62,7 @@
     return position >= min && position <= max;
   };
 
-  var navSlide = function navSlide(option) {
+  var NavSlide = function NavSlide(option) {
     var options = _extends({}, defaults, option);
 
     var navSelector = options.navSelector,
@@ -121,5 +121,5 @@
     });
   };
 
-  exports.default = navSlide;
+  exports.default = NavSlide;
 });
