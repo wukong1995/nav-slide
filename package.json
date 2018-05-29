@@ -1,6 +1,6 @@
 {
   "name": "nav-slide",
-  "version": "1.0.2",
+  "version": "2.0.1",
   "description": "A simple nav silde",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,6 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "jquery": "^3.2.1",
     "jquery-scroll": "^1.1.1"
   }
 }

@@ -1,4 +1,4 @@
-import navSilder from '../src';
+import NavSilder from '../src';
 
 new NavSilder({
   offset: 70,
