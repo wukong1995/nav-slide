@@ -10,7 +10,11 @@
   "keywords": [
     "node_modules"
   ],
-  "author": "wangpeipei",
+  "author": "peipei wong",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wukong1995/nav-slide.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.5.2",
