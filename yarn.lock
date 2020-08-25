@@ -126,9 +126,9 @@ aws4@^1.2.1:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/aws4/download/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
-babel-cli@^6.6.5:
+babel-cli@^6.26.0:
   version "6.26.0"
-  resolved "http://registry.npm.taobao.org/babel-cli/download/babel-cli-6.26.0.tgz#502ab54874d7db88ad00b887a06383ce03d002f1"
+  resolved "https://registry.yarnpkg.com/babel-cli/-/babel-cli-6.26.0.tgz#502ab54874d7db88ad00b887a06383ce03d002f1"
   dependencies:
     babel-core "^6.26.0"
     babel-polyfill "^6.26.0"
@@ -968,8 +968,8 @@ express@^4.13.3:
     vary "~1.1.1"
 
 extend@~3.0.0:
-  version "3.0.1"
-  resolved "http://registry.npm.taobao.org/extend/download/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
 
 extglob@^0.3.1:
   version "0.3.2"
@@ -1381,10 +1381,6 @@ jquery-scroll@^1.1.1:
 jquery@^2.1.4:
   version "2.2.4"
   resolved "http://registry.npm.taobao.org/jquery/download/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
-
-jquery@^3.2.1:
-  version "3.2.1"
-  resolved "http://registry.npm.taobao.org/jquery/download/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
